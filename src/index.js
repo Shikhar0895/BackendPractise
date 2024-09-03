@@ -5,6 +5,7 @@ import Express from "express";
 import connectDB from "./db/index.js";
 
 config();
+
 const app = Express();
 
 const __filename = fileURLToPath(import.meta.url); // get the resolved path to the file
