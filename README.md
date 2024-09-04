@@ -5,6 +5,8 @@
   - dotenv : npm i dotenv
   - express : npm i express
   - mongoose: npm i mongoose
+  - cors: npm i cors
+  - cookie-parser
     dev Dependencies
   - nodemon : npm i -D nodemon
   - prettier: npm i -D prettier

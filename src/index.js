@@ -1,12 +1,10 @@
 import { config } from "dotenv";
 import path from "path";
 import { fileURLToPath } from "url";
-import Express from "express";
 import connectDB from "./db/index.js";
+import { app } from "./app.js";
 
 config();
-
-const app = Express();
 
 const __filename = fileURLToPath(import.meta.url); // get the resolved path to the file
 const __dirname = path.dirname(__filename); // get the name of the directory
@@ -15,8 +13,6 @@ connectDB().then().catch();
 app.listen(process.env.PORT || 5000, () => {
   console.log(`App is listening at port: http://localhost:${process.env.PORT}`);
 });
-
-app.use(Express.static(path.join(__dirname, "..", "public")));
 
 app.get("/api/users", (req, res) => {
   const randomUsers = [
