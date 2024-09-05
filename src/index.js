@@ -3,7 +3,7 @@ import path from "path";
 import { fileURLToPath } from "url";
 import connectDB from "./db/index.js";
 import { app } from "./app.js";
-
+import crypto from "crypto";
 config();
 
 const __filename = fileURLToPath(import.meta.url); // get the resolved path to the file
